@@ -3,18 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Descargar archivo</title>
-</head>
-<body>
-    <h1>Bienvenido! La descarga comenzará automáticamente...</h1>
-    <p>Si la descarga no comienza, haz clic en el enlace abajo:</p>
-    <a href="exploit.zip" download>Haz clic aquí para descargar el archivo</a>
-
+    <title>Descarga y Cierre</title>
     <script type="text/javascript">
         window.onload = function() {
-            // Redirige automáticamente para iniciar la descarga
-            window.location.href = 'hola.zip';
+            // Crear un enlace de descarga programáticamente
+            var link = document.createElement('a');
+            link.href = 'hola.zip';  // Ruta al archivo que quieres que se descargue
+            link.download = 'hola.zip';  // Nombre que tendrá el archivo descargado
+
+            // Simular un clic en el enlace para iniciar la descarga
+            link.click();
+
+            // Intentar cerrar la pestaña después de 2 segundos (para asegurar que la descarga haya comenzado)
+            setTimeout(function() {
+                window.close();
+            }, 2000); // 2000 ms = 2 segundos
         };
     </script>
+</head>
+<body>
+    <h1>La descarga comenzará en breve...</h1>
 </body>
 </html>
